@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header__left img {
+    height: 40px;
+}
+
+.user__avatar {
+    border-radius: 50%;
+    width: 45px;
+}
+
+.header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: white;
+    z-index: 100;
+    top: 0;
+    box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header__middle {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.header__option .material-icons {
+    font-size: xx-large;
+    color: gray;
+}
+
+.header__option:hover .material-icons {
+    color: #2e81f4;
+}
+
+.header__option {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.header__option.active .material-icons {
+    color: #2e81f4;
+}
+
+.header__option.active {
+    border-bottom: 4px solid #2e81f4;
+}
+
+.header__option:hover {
+    background-color: #eff2f5;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: none;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+
+.header__info h4 {
+    margin-left: 10px;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__right .material-icons {
+    color: gray;
+    margin: 0 10px;
+}
+
+.header__right .material-icons:hover {
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px; /* Adjust spacing */
+}
+
+.dropdown-toggle {
+    font-size: 24px;
+    color: #333; /* Adjust color */
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #333; /* Adjust link color */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f9f9f9; /* Adjust hover background color */
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 -5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+footer h3 {
+    text-align: center;
+
+}
+
+footer h4 {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add some padding */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
